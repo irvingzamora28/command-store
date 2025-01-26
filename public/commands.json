@@ -8,5 +8,505 @@
     "updatedAt": "2025-01-26T03:07:41-07:00",
     "category": "file management",
     "notes": "Use with caution in production environments."
+  },
+  {
+    "command": "grep 'error' /var/log/syslog",
+    "description": "Search for 'error' messages in system log",
+    "example": "Use this command to quickly find system errors recorded in the syslog.",
+    "tags": ["grep", "logs", "error", "debugging"],
+    "createdAt": "2025-01-26T03:10:00-07:00",
+    "updatedAt": "2025-01-26T03:10:00-07:00",
+    "category": "system administration",
+    "notes": "Adjust log file path as needed."
+  },
+  {
+    "command": "ps aux | grep [process_name]",
+    "description": "Find a process by its name",
+    "example": "This command will help you quickly identify a running process by its name.",
+    "tags": ["ps", "process", "grep", "monitoring"],
+    "createdAt": "2025-01-26T03:12:00-07:00",
+    "updatedAt": "2025-01-26T03:12:00-07:00",
+    "category": "system administration",
+    "notes": "Replace [process_name] with the actual process name you are looking for."
+  },
+  {
+    "command": "du -sh * | sort -rh | head -n 10",
+    "description": "List top 10 largest directories in current location.",
+    "example": "Use to identify which folders consume the most disk space in the current directory",
+    "tags": ["du", "sort", "size", "disk", "directories"],
+    "createdAt": "2025-01-26T03:15:00-07:00",
+    "updatedAt": "2025-01-26T03:15:00-07:00",
+    "category": "file management",
+    "notes": "Can be modified to use a specific path"
+  },
+  {
+    "command": "df -h",
+    "description": "Show disk space usage",
+    "example": "Use this command to quickly view available disk space on your system.",
+    "tags": ["df", "disk", "space", "monitoring"],
+    "createdAt": "2025-01-26T03:18:00-07:00",
+    "updatedAt": "2025-01-26T03:18:00-07:00",
+    "category": "system administration",
+    "notes": " 'df' command is commonly used to report file system disk space usage."
+  },
+  {
+    "command": "history | grep [search_term]",
+    "description": "Search command history",
+    "example": "Helps find a previously entered command containing a specific word or phrase",
+    "tags": ["history", "grep", "search", "bash"],
+    "createdAt": "2025-01-26T03:21:00-07:00",
+    "updatedAt": "2025-01-26T03:21:00-07:00",
+    "category": "bash",
+    "notes": "Replace [search_term] with the term you want to find in your history"
+  },
+  {
+    "command": "top",
+    "description": "Display system resource usage",
+    "example": "Use this command to monitor real-time CPU, memory, and process usage.",
+    "tags": ["top", "resource", "cpu", "memory", "monitoring"],
+    "createdAt": "2025-01-26T03:24:00-07:00",
+    "updatedAt": "2025-01-26T03:24:00-07:00",
+    "category": "system administration",
+    "notes": "Press 'q' to exit"
+  },
+  {
+    "command": "chmod 755 [file_or_directory]",
+    "description": "Set read/execute permissions for group/others, read/write/execute for user",
+    "example": "Use to grant executable permissions to a script or folder.",
+    "tags": ["chmod", "permissions", "security"],
+    "createdAt": "2025-01-26T03:27:00-07:00",
+    "updatedAt": "2025-01-26T03:27:00-07:00",
+    "category": "file management",
+    "notes": "Replace [file_or_directory] with the target"
+  },
+  {
+    "command": "mkdir [new_directory]",
+    "description": "Create a new directory",
+    "example": "Use this command to make a new folder in the current directory.",
+    "tags": ["mkdir", "directory", "file"],
+    "createdAt": "2025-01-26T03:30:00-07:00",
+    "updatedAt": "2025-01-26T03:30:00-07:00",
+    "category": "file management",
+    "notes": "Replace [new_directory] with desired name."
+  },
+  {
+    "command": "rm -rf [directory]",
+    "description": "Remove a directory recursively",
+    "example": "Use with extreme caution, as this permanently removes directories and all content.",
+    "tags": ["rm", "directory", "delete", "dangerous"],
+    "createdAt": "2025-01-26T03:33:00-07:00",
+    "updatedAt": "2025-01-26T03:33:00-07:00",
+    "category": "file management",
+    "notes": "Replace [directory]. Be very careful when using this command."
+  },
+  {
+    "command": "cp [source_file] [destination_file]",
+    "description": "Copy a file",
+    "example": "Copying a file to another location.",
+    "tags": ["cp", "file", "copy"],
+    "createdAt": "2025-01-26T03:36:00-07:00",
+    "updatedAt": "2025-01-26T03:36:00-07:00",
+    "category": "file management",
+    "notes": "Make sure you have permissions to access and modify the source and destination location"
+  },
+  {
+    "command": "mv [old_file] [new_file]",
+    "description": "Rename or move a file or directory",
+    "example": "Moves or renames a file in the file system.",
+    "tags": ["mv", "file", "move", "rename"],
+    "createdAt": "2025-01-26T03:39:00-07:00",
+    "updatedAt": "2025-01-26T03:39:00-07:00",
+    "category": "file management",
+    "notes": "Can be used to move a file to a different directory or rename the file."
+  },
+  {
+    "command": "cat [file]",
+    "description": "View the content of a file",
+    "example": "Use to display the text within a file",
+    "tags": ["cat", "file", "view", "text"],
+    "createdAt": "2025-01-26T03:42:00-07:00",
+    "updatedAt": "2025-01-26T03:42:00-07:00",
+    "category": "file management",
+    "notes": "Replace [file] with the name of the file."
+  },
+  {
+    "command": "less [file]",
+    "description": "View a file, navigating through its content",
+    "example": "Use for large files, allows page navigation instead of displaying the entire file at once.",
+    "tags": ["less", "file", "view", "text"],
+    "createdAt": "2025-01-26T03:45:00-07:00",
+    "updatedAt": "2025-01-26T03:45:00-07:00",
+    "category": "file management",
+    "notes": "Press 'q' to exit"
+  },
+  {
+    "command": "head -n 10 [file]",
+    "description": "Display first 10 lines of a file",
+    "example": "Use this command to quickly check the beginning of a file.",
+    "tags": ["head", "file", "text", "view"],
+    "createdAt": "2025-01-26T03:48:00-07:00",
+    "updatedAt": "2025-01-26T03:48:00-07:00",
+    "category": "file management",
+    "notes": "Replace [file] with desired filename"
+  },
+  {
+    "command": "tail -n 10 [file]",
+    "description": "Display last 10 lines of a file",
+    "example": "Use this command to quickly check the end of a log file.",
+    "tags": ["tail", "file", "text", "view"],
+    "createdAt": "2025-01-26T03:51:00-07:00",
+    "updatedAt": "2025-01-26T03:51:00-07:00",
+    "category": "file management",
+    "notes": "Replace [file] with desired filename"
+  },
+  {
+    "command": "wget [url]",
+    "description": "Download a file from the web",
+    "example": "Use this command to download a file from the specified URL.",
+    "tags": ["wget", "download", "web"],
+    "createdAt": "2025-01-26T03:54:00-07:00",
+    "updatedAt": "2025-01-26T03:54:00-07:00",
+    "category": "network",
+    "notes": "Replace [url] with the actual URL to download."
+  },
+  {
+    "command": "curl [url] -o [filename]",
+    "description": "Download a file from the web using curl",
+    "example": "Use this command to download a file from the specified URL and rename it.",
+    "tags": ["curl", "download", "web"],
+    "createdAt": "2025-01-26T03:57:00-07:00",
+    "updatedAt": "2025-01-26T03:57:00-07:00",
+    "category": "network",
+    "notes": "Replace [url] with the actual URL and [filename] with the desired name."
+  },
+  {
+    "command": "ping [host]",
+    "description": "Test network connectivity to a host",
+    "example": "Use to check network reachability of a server or website.",
+    "tags": ["ping", "network", "connectivity"],
+    "createdAt": "2025-01-26T04:00:00-07:00",
+    "updatedAt": "2025-01-26T04:00:00-07:00",
+    "category": "network",
+    "notes": "Replace [host] with the actual hostname or IP address."
+  },
+  {
+    "command": "ssh [user]@[host]",
+    "description": "Connect to a remote server using SSH",
+    "example": "Use to securely access a remote computer.",
+    "tags": ["ssh", "remote", "secure", "network"],
+    "createdAt": "2025-01-26T04:03:00-07:00",
+    "updatedAt": "2025-01-26T04:03:00-07:00",
+    "category": "network",
+    "notes": "Replace [user] with username and [host] with remote server address."
+  },
+  {
+    "command": "scp [user]@[host]:[remote_file] [local_file]",
+    "description": "Securely copy files between remote server and local computer.",
+    "example": "Use to transfer files to or from a remote server",
+    "tags": ["scp", "copy", "remote", "secure", "network"],
+    "createdAt": "2025-01-26T04:06:00-07:00",
+    "updatedAt": "2025-01-26T04:06:00-07:00",
+    "category": "network",
+    "notes": "Replace the placeholders with the appropriate values."
+  },
+  {
+    "command": "ifconfig",
+    "description": "Display network interface configuration",
+    "example": "Use to view IP address, MAC address, and other network interface information",
+    "tags": ["ifconfig", "network", "ip", "interface"],
+    "createdAt": "2025-01-26T04:09:00-07:00",
+    "updatedAt": "2025-01-26T04:09:00-07:00",
+    "category": "network",
+    "notes": "Use 'ip addr' on some newer systems if 'ifconfig' doesn't exist"
+  },
+  {
+    "command": "netstat -tulnp",
+    "description": "Display network connections, listening ports",
+    "example": "Use to view which ports are open and listening for connections",
+    "tags": ["netstat", "network", "ports", "monitoring"],
+    "createdAt": "2025-01-26T04:12:00-07:00",
+    "updatedAt": "2025-01-26T04:12:00-07:00",
+    "category": "network",
+    "notes": "Provides details of active internet connections"
+  },
+  {
+    "command": "sudo apt update",
+    "description": "Update package lists on Debian/Ubuntu systems",
+    "example": "Use this command before installing new packages to ensure the package lists are up to date",
+    "tags": ["apt", "package", "update", "debian", "ubuntu"],
+    "createdAt": "2025-01-26T04:15:00-07:00",
+    "updatedAt": "2025-01-26T04:15:00-07:00",
+    "category": "package management",
+    "notes": "Requires sudo privileges."
+  },
+  {
+    "command": "sudo apt upgrade",
+    "description": "Upgrade installed packages on Debian/Ubuntu systems",
+    "example": "Use to update all installed software to their latest versions",
+    "tags": ["apt", "package", "upgrade", "debian", "ubuntu"],
+    "createdAt": "2025-01-26T04:18:00-07:00",
+    "updatedAt": "2025-01-26T04:18:00-07:00",
+    "category": "package management",
+    "notes": "Requires sudo privileges and it should be performed with caution."
+  },
+  {
+    "command": "sudo apt install [package_name]",
+    "description": "Install a package on Debian/Ubuntu systems",
+    "example": "Use to install a specific software package.",
+    "tags": ["apt", "package", "install", "debian", "ubuntu"],
+    "createdAt": "2025-01-26T04:21:00-07:00",
+    "updatedAt": "2025-01-26T04:21:00-07:00",
+    "category": "package management",
+    "notes": "Replace [package_name] with the name of the package you want to install"
+  },
+  {
+    "command": "sudo apt remove [package_name]",
+    "description": "Remove a package on Debian/Ubuntu systems",
+    "example": "Use this command to uninstall a specific software package",
+    "tags": ["apt", "package", "remove", "debian", "ubuntu"],
+    "createdAt": "2025-01-26T04:24:00-07:00",
+    "updatedAt": "2025-01-26T04:24:00-07:00",
+    "category": "package management",
+    "notes": "Replace [package_name] with the name of the package to be removed."
+  },
+  {
+    "command": "sudo yum update",
+    "description": "Update all installed packages on Red Hat systems",
+    "example": "Use this command to update all installed software to their latest versions on RedHat systems",
+    "tags": ["yum", "package", "update", "redhat", "centos"],
+    "createdAt": "2025-01-26T04:27:00-07:00",
+    "updatedAt": "2025-01-26T04:27:00-07:00",
+    "category": "package management",
+    "notes": "Requires sudo privileges and should be used with caution"
+  },
+  {
+    "command": "sudo yum install [package_name]",
+    "description": "Install a new package on Red Hat systems",
+    "example": "Use to install a new software package in a RedHat based system",
+    "tags": ["yum", "package", "install", "redhat", "centos"],
+    "createdAt": "2025-01-26T04:30:00-07:00",
+    "updatedAt": "2025-01-26T04:30:00-07:00",
+    "category": "package management",
+    "notes": "Replace [package_name] with the name of the package you want to install"
+  },
+  {
+    "command": "sudo yum remove [package_name]",
+    "description": "Remove a package on Red Hat systems",
+    "example": "Use to uninstall a software package in a RedHat based system",
+    "tags": ["yum", "package", "remove", "redhat", "centos"],
+    "createdAt": "2025-01-26T04:33:00-07:00",
+    "updatedAt": "2025-01-26T04:33:00-07:00",
+    "category": "package management",
+    "notes": "Replace [package_name] with the name of the package to be removed."
+  },
+  {
+    "command": "brew update",
+    "description": "Update Homebrew package list",
+    "example": "Used to refresh your homebrew package listing",
+    "tags": ["brew", "package", "update", "macos"],
+    "createdAt": "2025-01-26T04:36:00-07:00",
+    "updatedAt": "2025-01-26T04:36:00-07:00",
+    "category": "package management",
+    "notes": "Must have Homebrew installed"
+  },
+  {
+    "command": "brew upgrade",
+    "description": "Upgrade outdated packages using Homebrew",
+    "example": "Used to update your homebrew packages.",
+    "tags": ["brew", "package", "upgrade", "macos"],
+    "createdAt": "2025-01-26T04:39:00-07:00",
+    "updatedAt": "2025-01-26T04:39:00-07:00",
+    "category": "package management",
+    "notes": "Must have Homebrew installed"
+  },
+  {
+    "command": "brew install [package_name]",
+    "description": "Install a new package with Homebrew",
+    "example": "Use to install new software using the Homebrew package manager.",
+    "tags": ["brew", "package", "install", "macos"],
+    "createdAt": "2025-01-26T04:42:00-07:00",
+    "updatedAt": "2025-01-26T04:42:00-07:00",
+    "category": "package management",
+    "notes": "Must have Homebrew installed. Replace [package_name]"
+  },
+  {
+    "command": "brew uninstall [package_name]",
+    "description": "Uninstall a package using Homebrew",
+    "example": "Used to remove software using Homebrew.",
+    "tags": ["brew", "package", "uninstall", "macos"],
+    "createdAt": "2025-01-26T04:45:00-07:00",
+    "updatedAt": "2025-01-26T04:45:00-07:00",
+    "category": "package management",
+    "notes": "Must have Homebrew installed. Replace [package_name]"
+  },
+  {
+    "command": "git clone [repository_url]",
+    "description": "Clone a Git repository",
+    "example": "Downloads a remote git repository to your local machine",
+    "tags": ["git", "clone", "repository", "version control"],
+    "createdAt": "2025-01-26T04:48:00-07:00",
+    "updatedAt": "2025-01-26T04:48:00-07:00",
+    "category": "version control",
+    "notes": "Replace [repository_url] with the actual URL."
+  },
+  {
+    "command": "git status",
+    "description": "Show status of changes in a Git repository",
+    "example": "Displays modified, added and deleted files in the current repository.",
+    "tags": ["git", "status", "version control"],
+    "createdAt": "2025-01-26T04:51:00-07:00",
+    "updatedAt": "2025-01-26T04:51:00-07:00",
+    "category": "version control",
+    "notes": "Must be in a git repository."
+  },
+  {
+    "command": "git add .",
+    "description": "Add all changes in the current directory to the staging area.",
+    "example": "Use this command to add all your modified files to the git staging area to later commit them.",
+    "tags": ["git", "add", "staging", "version control"],
+    "createdAt": "2025-01-26T04:54:00-07:00",
+    "updatedAt": "2025-01-26T04:54:00-07:00",
+    "category": "version control",
+    "notes": "Must be in a git repository."
+  },
+  {
+    "command": "git commit -m '[commit_message]'",
+    "description": "Commit staged changes with a message",
+    "example": "Records the changes you've made to the repository along with a message.",
+    "tags": ["git", "commit", "version control"],
+    "createdAt": "2025-01-26T04:57:00-07:00",
+    "updatedAt": "2025-01-26T04:57:00-07:00",
+    "category": "version control",
+    "notes": "Replace [commit_message] with a brief description of your changes."
+  },
+  {
+    "command": "git push origin [branch_name]",
+    "description": "Upload local commits to remote repository",
+    "example": "Use this command to publish all your changes to the remote repository",
+    "tags": ["git", "push", "remote", "version control"],
+    "createdAt": "2025-01-26T05:00:00-07:00",
+    "updatedAt": "2025-01-26T05:00:00-07:00",
+    "category": "version control",
+    "notes": "Replace [branch_name] with the name of your branch."
+  },
+  {
+    "command": "git pull origin [branch_name]",
+    "description": "Download changes from remote repository",
+    "example": "Use this to update your local branch with the changes made remotely.",
+    "tags": ["git", "pull", "remote", "version control"],
+    "createdAt": "2025-01-26T05:03:00-07:00",
+    "updatedAt": "2025-01-26T05:03:00-07:00",
+    "category": "version control",
+    "notes": "Replace [branch_name] with the name of your branch."
+  },
+  {
+    "command": "git branch",
+    "description": "List branches in the current git repo",
+    "example": "Use this command to know which branches you have in the repo",
+    "tags": ["git", "branch", "version control"],
+    "createdAt": "2025-01-26T05:06:00-07:00",
+    "updatedAt": "2025-01-26T05:06:00-07:00",
+    "category": "version control",
+    "notes": "Must be inside a git repo"
+  },
+  {
+    "command": "git checkout [branch_name]",
+    "description": "Switch to a different branch",
+    "example": "Use this command to switch between branches",
+    "tags": ["git", "checkout", "branch", "version control"],
+    "createdAt": "2025-01-26T05:09:00-07:00",
+    "updatedAt": "2025-01-26T05:09:00-07:00",
+    "category": "version control",
+    "notes": "Replace [branch_name] with the name of the branch you want to switch to."
+  },
+  {
+    "command": "sudo systemctl start [service_name]",
+    "description": "Start a systemd service",
+    "example": "Use this command to start a specific service.",
+    "tags": ["systemctl", "service", "start", "systemd"],
+    "createdAt": "2025-01-26T05:12:00-07:00",
+    "updatedAt": "2025-01-26T05:12:00-07:00",
+    "category": "system administration",
+    "notes": "Requires sudo privileges. Replace [service_name]"
+  },
+  {
+    "command": "sudo systemctl stop [service_name]",
+    "description": "Stop a systemd service",
+    "example": "Use this command to stop a specific service.",
+    "tags": ["systemctl", "service", "stop", "systemd"],
+    "createdAt": "2025-01-26T05:15:00-07:00",
+    "updatedAt": "2025-01-26T05:15:00-07:00",
+    "category": "system administration",
+    "notes": "Requires sudo privileges. Replace [service_name]"
+  },
+  {
+    "command": "sudo systemctl restart [service_name]",
+    "description": "Restart a systemd service",
+    "example": "Use this command to restart a specific service.",
+    "tags": ["systemctl", "service", "restart", "systemd"],
+    "createdAt": "2025-01-26T05:18:00-07:00",
+    "updatedAt": "2025-01-26T05:18:00-07:00",
+    "category": "system administration",
+    "notes": "Requires sudo privileges. Replace [service_name]"
+  },
+  {
+    "command": "sudo systemctl status [service_name]",
+    "description": "Check the status of a systemd service",
+    "example": "Use this command to see the status of a specific service.",
+    "tags": ["systemctl", "service", "status", "systemd"],
+    "createdAt": "2025-01-26T05:21:00-07:00",
+    "updatedAt": "2025-01-26T05:21:00-07:00",
+    "category": "system administration",
+    "notes": "Requires sudo privileges. Replace [service_name]"
+  },
+  {
+    "command": "tar -czvf [archive_name].tar.gz [directory_to_compress]",
+    "description": "Create a compressed tar archive",
+    "example": "Use this command to compress a directory into a tar.gz archive.",
+    "tags": ["tar", "compress", "archive"],
+    "createdAt": "2025-01-26T05:24:00-07:00",
+    "updatedAt": "2025-01-26T05:24:00-07:00",
+    "category": "file management",
+    "notes": "Replace [archive_name] and [directory_to_compress] with correct values"
+  },
+  {
+    "command": "tar -xzvf [archive_name].tar.gz",
+    "description": "Extract files from a compressed tar archive",
+    "example": "Use to extract files from a tar.gz archive.",
+    "tags": ["tar", "extract", "archive"],
+    "createdAt": "2025-01-26T05:27:00-07:00",
+    "updatedAt": "2025-01-26T05:27:00-07:00",
+    "category": "file management",
+    "notes": "Replace [archive_name] with the correct name"
+  },
+  {
+    "command": "zip [archive_name].zip [files_to_zip]",
+    "description": "Create a zip archive",
+    "example": "Compresses multiple files into a single zip file.",
+    "tags": ["zip", "compress", "archive"],
+    "createdAt": "2025-01-26T05:30:00-07:00",
+    "updatedAt": "2025-01-26T05:30:00-07:00",
+    "category": "file management",
+    "notes": "Replace [archive_name] and [files_to_zip] with correct values"
+  },
+  {
+    "command": "unzip [archive_name].zip",
+    "description": "Extract files from a zip archive",
+    "example": "Use to extract a zip archive to the current location.",
+    "tags": ["zip", "extract", "archive"],
+    "createdAt": "2025-01-26T05:33:00-07:00",
+    "updatedAt": "2025-01-26T05:33:00-07:00",
+    "category": "file management",
+    "notes": "Replace [archive_name] with the correct file name"
+  },
+  {
+    "command": "find . -type d -empty",
+    "description": "Find empty directories in current location",
+    "example": "Used to find and remove empty directories in the current path.",
+    "tags": ["find", "directory", "empty"],
+    "createdAt": "2025-01-26T05:36:00-07:00",
+    "updatedAt": "2025-01-26T05:36:00-07:00",
+    "category": "file management",
+    "notes": "Be careful when removing empty directories."
   }
 ]
