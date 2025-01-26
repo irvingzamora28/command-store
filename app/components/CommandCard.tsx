@@ -1,14 +1,18 @@
 import { Command } from '../types/command';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 interface CommandCardProps {
   command: Command;
 }
 
 const CommandCard: FC<CommandCardProps> = ({ command }) => {
+  const [copied, setCopied] = useState(false);
+
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(command.command);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
     } catch (err) {
       console.error('Failed to copy command:', err);
     }
@@ -22,9 +26,31 @@ const CommandCard: FC<CommandCardProps> = ({ command }) => {
         </h3>
         <button
           onClick={copyToClipboard}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-sm"
+          className={`px-3 py-1 rounded-md text-sm transition-all duration-200 ${
+            copied
+              ? 'bg-green-500 hover:bg-green-600'
+              : 'bg-blue-500 hover:bg-blue-600'
+          } text-white flex items-center gap-1`}
         >
-          Copy
+          {copied ? (
+            <>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Copied!
+            </>
+          ) : (
+            'Copy'
+          )}
         </button>
       </div>
       
