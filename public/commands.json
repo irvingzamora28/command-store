@@ -1,0 +1,12 @@
+[
+  {
+    "command": "find ~ -type f -size +500M -exec ls -lh {} \\; 2>/dev/null",
+    "description": "Find large files (>500MB) in home directory",
+    "example": "This command will list all files larger than 500MB in your home directory, showing their sizes in human-readable format",
+    "tags": ["find", "files", "size", "search"],
+    "createdAt": "2025-01-26T03:07:41-07:00",
+    "updatedAt": "2025-01-26T03:07:41-07:00",
+    "category": "file management",
+    "notes": "Use with caution in production environments."
+  }
+]

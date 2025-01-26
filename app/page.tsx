@@ -1,25 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CommandCard from './components/CommandCard';
 import { Command } from './types/command';
 
-// Initial commands array with your first command
-const initialCommands: Command[] = [
-  {
-    id: '1',
-    command: 'find ~ -type f -size +500M -exec ls -lh {} \\; 2>/dev/null',
-    description: 'Find large files (>500MB) in home directory',
-    example: 'This command will list all files larger than 500MB in your home directory, showing their sizes in human-readable format',
-    tags: ['find', 'files', 'size', 'search'],
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-];
+const initialCommands: Command[] = [];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [commands] = useState<Command[]>(initialCommands);
+  const [commands, setCommands] = useState<Command[]>(initialCommands);
+
+  useEffect(() => {
+    const fetchCommands = async () => {
+      const response = await fetch('/commands.json');
+      const data: Command[] = await response.json();
+      setCommands(data);
+    };
+    fetchCommands();
+  }, []);
 
   const filteredCommands = commands.filter((command) =>
     command.command.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -46,8 +44,8 @@ export default function Home() {
         </div>
 
         <div className="space-y-6">
-          {filteredCommands.map((command) => (
-            <CommandCard key={command.id} command={command} />
+          {filteredCommands.map((command, index) => (
+            <CommandCard key={index} command={command} />
           ))}
         </div>
       </div>
